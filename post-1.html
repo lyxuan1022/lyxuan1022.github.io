@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>计算机网络概述 | lyxuan1022</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 简易顶部导航 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">lyxuan1022</a>
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="index.html#about">关于我</a></li>
+        <li><a href="index.html#hometown">家乡</a></li>
+        <li><a href="index.html#ustc">科大</a></li>
+        <li><a href="post-1.html" class="active">文章</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 文章主体 -->
+  <article class="section">
+    <div class="container post">
+      <h1>计算机网络：让世界互联的「高速公路」</h1>
+      <p class="meta">
+        <i class="far fa-calendar"></i> 2025-06-25 &nbsp;
+        <i class="far fa-clock"></i> 5 min read
+      </p>
+
+      <h2>1. 什么是计算机网络？</h2>
+      <p>计算机网络是把若干台<strong>自治的计算机系统</strong>通过<strong>通信线路</strong>连接起来，以<strong>网络协议</strong>为规则，实现<strong>资源共享与信息交换</strong>的系统。简单来说，没有网络，我们就无法刷微博、点外卖、联机打游戏，更不会有今天的「云生活」。</p>
+
+      <h2>2. 网络如何分层？—— OSI 七层 vs TCP/IP 四层</h2>
+      <p>为了降低复杂度，人们把庞大功能拆成层次：</p>
+      <ul>
+        <li><strong>应用层</strong>：HTTP、FTP、SMTP 等，直接为用户服务。</li>
+        <li><strong>传输层</strong>：TCP（可靠）、UDP（高效），负责端到端送达。</li>
+        <li><strong>网络层</strong>：IP、ICMP、路由选择，解决「走哪条路」。</li>
+        <li><strong>数据链路层</strong>：以太网、Wi-Fi，解决「下一跳怎么传」。</li>
+        <li><strong>物理层</strong>：光缆、双绞线、无线电磁波，只负责「0 1 光电信号」。</li>
+      </ul>
+      <p>实际互联网采用<strong>TCP/IP 四层模型</strong>，把上三层合并为「应用层」，链路+物理合并为「网络接口层」，更简洁。</p>
+
+      <h2>3. 数据怎么从 A 到 B？—— 封装与解封装</h2>
+      <p>发送端自顶向下逐层加「头部」（封装），接收端自底向上逐层去头部（解封装）。就像俄罗斯套娃，每一层只关心自己的那一层。</p>
+      <div class="highlight">
+        应用数据 → 段(TCP) → 包(IP) → 帧(以太网) → 比特流
+      </div>
+
+      <h2>4. 关键协议速览</h2>
+      <table>
+        <thead><tr><th>协议</th><th>所在层</th><th>作用</th></tr></thead>
+        <tbody>
+          <tr><td>HTTP/HTTPS</td><td>应用层</td><td>Web 冲浪</td></tr>
+          <tr><td>TCP</td><td>传输层</td><td>可靠字节流</td></tr>
+          <tr><td>UDP</td><td>传输层</td><td>无连接、低延迟</td></tr>
+          <tr><td>IP</td><td>网络层</td><td>寻址+路由</td></tr>
+          <tr><td>ARP</td><td>网络层</td><td>IP→MAC 映射</td></tr>
+          <tr><td>Ethernet</td><td>链路层</td><td>局域网帧格式</td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. 延迟与带宽：衡量网络的两把尺子</h2>
+      <ul>
+        <li><strong>带宽</strong>：每秒能传多少 bit（Mbps/Gbps），决定「水管粗细」。</li>
+        <li><strong>延迟（RTT）</strong>：数据一去一回所需时间（ms），决定「反应快慢」。游戏卡顿多是延迟高，而非带宽不足。</li>
+      </ul>
+
+      <h2>6. 网络安全：不只是密码</h2>
+      <p>网络协议天生「信任」环境，因此需要额外机制：</p>
+      <ul>
+        <li>机密性——<strong>加密</strong>（TLS/SSL、IPSec）</li>
+        <li>完整性——<strong>数字签名/哈希</strong></li>
+        <li>身份验证——<strong>证书、802.1X</strong></li>
+        <li>可用性——<strong>防火墙、DDoS 清洗</strong></li>
+      </ul>
+
+      <h2>7. 未来趋势</h2>
+      <p>① HTTP/3 基于 QUIC（UDP）（已落地）<br>
+         ② IPv6 规模部署，解决地址枯竭<br>
+         ③ 5G/6G 带来 <1 ms 空口延迟，赋能 VR、车联网<br>
+         ④ 可编程网络（SDN）（软件定义网络）让「路由」像写程序一样灵活。</p>
+
+      <h2>结语</h2>
+      <p>计算机网络既复杂又美妙：向下屏蔽物理细节，向上提供「好像就在身边」的错觉。理解它，不仅能写出更高性能的代码，也能在云端故障时快速定位「哪一层掉链子」。希望这篇小文能为你打开网络世界的大门！</p>
+
+      <!-- 返回首页 -->
+      <div class="back-home">
+        <a href="index.html"><i class="fas fa-home"></i> 返回首页</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 lyxuan1022 · Built with ❤ and GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>
