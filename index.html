@@ -1,5 +1,98 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Lyxuan1022 | 主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- 图标 -->
+  <link rel="icon" href="assets/favicon.ico">
+  <!-- 字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Lyxuan1022</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#hometown">家乡</a></li>
+        <li><a href="#ustc">科大</a></li>
+      </ul>
+    </div>
+  </nav>
 
-block content
-  include ./includes/mixins/indexPostUI.pug
-  +indexPostUI
+  <!-- 主视觉 -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Lyxuan1022</h1>
+      <p>中科大计算机科学与技术专业在读 · 来自安徽肥东</p>
+      <a href="#about" class="btn">认识我 <i class="fas fa-arrow-down"></i></a>
+    </div>
+  </header>
+
+  <!-- 关于我 -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>关于我</h2>
+      <div class="two-col">
+        <div>
+          <p>热爱 Linux 与开源。</p>
+          <p>座右铭：Keep it simple, keep it open.</p>
+          <a class="link-highlight" href="https://github.com/lyxuan1022" target="_blank">
+            <i class="fab fa-github"></i> 我的 GitHub
+          </a>
+        </div>
+        <img src="assets/coding.jpg" alt="coding">
+      </div>
+    </div>
+  </section>
+
+  <!-- 家乡 -->
+  <section id="hometown" class="section bg-alt">
+    <div class="container">
+      <h2>我的家乡：肥东</h2>
+      <div class="two-col reverse">
+        <img src="assets/bridge.jpg" alt="肥东长临河大桥">
+        <div>
+          <p>肥东地处江淮之间，四季分明，稻香鱼肥。</p>
+          <p>长临河老街、四顶山森林公园、巢湖湿地皆是周末好去处。</p>
+          <p>一碗「肥东老母鸡」配上锅贴，是游子归家的第一口乡愁。</p>
+          <a class="link-highlight" href="https://baike.baidu.com/item/肥东县" target="_blank">
+            <i class="fas fa-map-marker-alt"></i> 了解更多
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 科大 -->
+  <section id="ustc" class="section">
+    <div class="container">
+      <h2>中国科学技术大学</h2>
+      <div class="two-col">
+        <div>
+          <p>USTC —— 中国科学院所属以前沿科学和高新技术为主的顶尖高校。</p>
+          <p>西区图书馆的星空屋顶、樱花大道的春季落英、也西湖的黑天鹅，陪伴每一个计科学子的日夜。</p>
+          <p>在这里，我学习操作系统、编译原理。</p>
+          <a class="link-highlight" href="https://www.ustc.edu.cn" target="_blank">
+            <i class="fas fa-graduation-cap"></i> 学校官网
+          </a>
+        </div>
+        <img src="assets/ustc.jpg" alt="USTC 樱花大道">
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2024 Lyxuan1022 · Built with ❤ and GitHub Pages</p>
+      <img src="https://visitor-badge.glitch.me/badge?page_id=lyxuan1022.lyxuan1022" alt="访客">
+    </div>
+  </footer>
+</body>
+</html>
