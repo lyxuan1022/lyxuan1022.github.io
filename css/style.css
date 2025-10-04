@@ -83,3 +83,31 @@ img { max-width: 100%; border-radius: var(--radius); }
   .two-col { flex-direction: column; }
   .hero h1 { font-size: 2rem; }
 }
+
+/* ===== 文章卡片 ===== */
+.post-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.post-card img {
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.post-info h3 a {
+  color: var(--text);
+}
+.post-meta {
+  color: #777;
+  font-size: 0.9rem;
+}
+.center {
+  text-align: center;
+  margin-top: 20px;
+}
